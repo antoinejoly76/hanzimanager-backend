@@ -15,10 +15,10 @@ var dbURI = 'mongodb://localhost:27017/hanzimanager'
 if (process.env.NODE_ENV === 'production') {
     dbURI = 'mongodb://heroku_sb57b654:85h0chk24hoi6quj2am6ducqr0@ds135233.mlab.com:35233/heroku_sb57b654'
 }
-console.log(process.env);
+
 console.log("this is dbURI..." + dbURI)
 
-mongoose.connect('mongodb://heroku_sb57b654:85h0chk24hoi6quj2am6ducqr0@ds135233.mlab.com:35233/heroku_sb57b654'); //TODO to change when mongodb is installed
+mongoose.connect(dbURI); //TODO to change when mongodb is installed
 
 const connection = mongoose.connection;
 
