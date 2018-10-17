@@ -13,9 +13,10 @@ app.use(cors());
 app.use(bodyParser.json());
 var dbURI = 'mongodb://localhost:27017/hanzimanager'
 if (process.env.NODE_ENV === 'production') {
-    dbURI = 'mongodb://heroku_t14qn55r:1ogm3fok2fqj6pj3mksutsaarb@ds237815.mlab.com:37815/heroku_t14qn55r'
+    dbURI = 'mongodb://heroku_sb57b654:85h0chk24hoi6quj2am6ducqr0@ds135233.mlab.com:35233/heroku_sb57b654'
 }
-mongoose.connect(dbURI); //TODO to change when mongodb is installed
+console.log(dbURI)
+mongoose.connect('mongodb://heroku_sb57b654:85h0chk24hoi6quj2am6ducqr0@ds135233.mlab.com:35233/heroku_sb57b654'); //TODO to change when mongodb is installed
 
 const connection = mongoose.connection;
 
